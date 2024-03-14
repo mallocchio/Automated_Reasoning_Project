@@ -1,0 +1,22 @@
+ASP Input:
+day(1..5).
+roadsTraveledPerDay(1..7).
+#const max_km_per_day = 96.
+road(1, 2, 47).
+road(2, 1, 47).
+road(2, 3, 25).
+road(3, 2, 25).
+road(3, 4, 42).
+road(4, 3, 42).
+road(4, 1, 1).
+road(1, 4, 1).
+road(3, 1, 2).
+road(1, 3, 2).
+
+MiniZinc Input:
+intersections = 4;
+max_km_per_day = 96;
+distance = [| 0 , 47 , 2 , 1|
+47 , 0 , 25 , 0|
+2 , 25 , 0 , 42|
+1 , 0 , 42 , 0 |];
